@@ -1,6 +1,9 @@
+const clock = document.getElementById("clock")
+const display = document.querySelector(".display")
 const secondHand = document.querySelector(".second-hand");
 const minsHand = document.querySelector(".min-hand");
 const hourHand = document.querySelector(".hour-hand");
+
 
 function setDate() {
   const now = new Date();
@@ -16,6 +19,16 @@ function setDate() {
   const hour = now.getHours();
   const hourDegrees = (hour / 12) * 360 + (mins / 60) * 30 + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+  display.textContent = new Date(now).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  });
+
 }
 
 setInterval(setDate, 1000);
