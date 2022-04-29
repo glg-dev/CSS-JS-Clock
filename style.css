@@ -1,7 +1,13 @@
+:root {
+  --neon: #04d9ff;
+}
+
 body {
   font-family: 'Neonderthaw', cursive;
-  color: rgb(56, 0, 0);
-  background: linear-gradient(66deg, #DECBA4 0%, #3E5151 100%);
+  color: var(--neon);
+  /* background: linear-gradient(147deg, #EBEBEB 0%, #DBDBDB 74%); */
+  background: rgba(0, 0, 0, 0.89);
+
   text-align: center;
   font-size: 10px;
   margin: 0;
@@ -17,21 +23,25 @@ body {
 .clock {
   width: 20rem;
   height: 20rem;
-  border: 5px solid rgb(190, 190, 190);
+  border: 5px solid var(--neon);
   border-radius: 50%;
   margin: 50px;
   position: relative;
   padding: 2rem;
   box-shadow:
-    0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #616161,
-    inset 0 0 10px black,
-    0 0 10px rgba(0,0,0,0.2);
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--neon),
+    0 0 82px var(--neon),
+    0 0 92px var(--neon),
+    0 0 102px var(--neon),
+    0 0 151px var(--neon);
 }
 
 .clock-face {
-  background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: 1px 1px 50px rgba(56, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.89);
+  box-shadow: 1px 1px 50px rgba(4, 217, 255, .4);
   border-radius: 50%;
   position: relative;
   width: 100%;
@@ -42,7 +52,9 @@ body {
 .hand {
   width: 50%;
   height: 4px;
-  background: linear-gradient(to left, rgb(56, 0, 0), black);
+  /* background: linear-gradient(to left, rgb(56, 0, 0), black); */
+  background: var(--neon);
+  box-shadow: 0 0 2px #FFF, 0 0 6px var(--neon), 0 0 18px var(--neon);
   border-radius: 2px;
   position: absolute;
   top: 50%;
@@ -71,5 +83,15 @@ body {
   opacity: 0;
   transition: all 1s;
   border-radius: 10px;
-  box-shadow: -1px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px var(--neon),
+  0 0 82px var(--neon),
+  0 0 92px var(--neon),
+  0 0 102px var(--neon),
+  0 0 151px var(--neon);
+  text-shadow: 0 0 2px #FFF, 0 0 4px #FFF, 0 0 6px var(--neon), 0 0 8px var(--neon);
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
 }
